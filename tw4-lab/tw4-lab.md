@@ -1,1 +1,1 @@
-www.github.com/benfrailey/bcfdkp/tw4-lab/tw4-lab.pdf
+https://github.com/benfrailey/bcfdkp/blob/master/tw4-lab/tw4-lab.pdf
