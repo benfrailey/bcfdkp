@@ -1,6 +1,6 @@
 # Assignment 11
 
-I listened in on the Chaoss weekly call on Tuesday, April 7.
+I listened in on the General CHAOSS Weekly Call on Tuesday, April 7.
 
 **Podcast reflection**
 
