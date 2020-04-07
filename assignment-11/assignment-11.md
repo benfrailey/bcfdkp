@@ -1,6 +1,6 @@
 # Assignment 11
 
-I listened in on the General CHAOSS Weekly Call on Tuesday, April 7.
+I listened in on the General CHAOSS Weekly Call on Tuesday, April 7 but am planning on contributing to the evolution working group
 
 **Podcast reflection**
 
