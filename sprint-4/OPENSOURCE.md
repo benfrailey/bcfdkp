@@ -1,1 +1,3 @@
-rns
+I found the first article very interesting in the sense that instead of looking at open source involvement from a typical viewpoint, they broke down the psychology that leads to contribution. I really liked the idea that fun was the reason for 28% of the hours spent on open source projects. It's very nice to see that the open source community is run on passion for projects more than just money.
+
+I liked article two because it expanded the view from which I typically look at open source. I never fully understood why companies contribute to open source, but the article laid out the benefits including finding employees, influencing the project, and fixing bugs that can affect the company. I also liked its breakdown of the types of contributors. The article overall took a very scientific approach to explaining open source. I really liked how it was structured and how it is able to concisely explain open source in a clear and meaningful way.
