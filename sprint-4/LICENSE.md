@@ -1,1 +1,1 @@
-diwa
+I would most likely use the MIT License for an open source project. I really like how simple, yet all encompassing it is. It seems to be very much in the spirit of open source. It simply says you can do whatever you want with my software, but if something goes wrong with it it's not my fault. It's perfect for allowing people to contribute and share it as they wish, while ensuring that I can't get in trouble for changes made to the application. I liked it more than others because it was so much simpler and easy to read/understand.
