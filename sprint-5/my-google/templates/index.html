@@ -1,0 +1,104 @@
+<!--
+name: Ben Frailey
+pawprint: bcfdkp
+date: January 30, 2019
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Ben Frailey</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <link href="{{ url_for('static', filename='jquery-ui-1.12.1.custom/jquery-ui.min.css')}}" rel="stylesheet" type="text/css">
+    <script src="{{ url_for('static', filename='jquery-ui-1.12.1.custom/external/jquery/jquery.js')}}"></script>
+    <script src="{{ url_for('static', filename='jquery-ui-1.12.1.custom/jquery-ui.min.js')}}"></script>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+        <div class="center">
+          <img src="{{ url_for('static', filename='logo.png')}}" alt="logo" id="logo">
+        </div>
+      <script language="javascript" type="text/javascript"
+  src={{ url_for('static', filename='header.txt')}}></script>
+
+        <script>
+
+            $(function(){
+            $("input[type=submit]").button();
+        });
+
+            var picture = 0;
+
+            function changePicture(){
+                picture++;
+                picture = picture % 3;
+
+                if(picture == 0){
+                    document.getElementById("picOfMe").innerHTML = "<img src={{url_for('static', filename='me.png')}} alt='me' id='me'/>";
+                }
+
+                if(picture == 1){
+                    document.getElementById("picOfMe").innerHTML = "<img src={{url_for('static', filename='dog.png')}} alt='me' id='me'/>";
+                }
+
+                if(picture == 2){
+                    document.getElementById("picOfMe").innerHTML = "<img src={{url_for('static', filename='family.png')}} alt='me' id='me'/>";
+                }
+
+            }
+
+            $(document).ready(function(){
+                $("#login").click(function(){
+                    $("#popup").css("display", "block");
+                    $('body').css("background", "grey");
+                    $("#me").css("filter", "brightness(50%)");
+                    $("#logo").css("filter", "brightness(50%)");
+                });
+            });
+
+
+        </script>
+    </head>
+    <body>
+
+<!--
+        <?php
+            $page = "home";
+            include 'header.php';
+        ?>
+-->
+
+        <div class="left">
+            <p>Hey I'm Ben! Welcome to my site! let me tell you a little bit about myself. I'm a Computer Science major from Saint Louis, Missouri. I've got two siblings (if you count my dog, which of course I do), and I've been a tech nerd ever since I was old enough to use a computer (I think I was helping my dad with laptop issues by the time I was five). I've always loved technology but it wasn't until I took my first programming class in high school that I knew I wanted to become a software developer. From that point on I took every Computer Science class I could fit into my high school schedule, and couldn't wait to learn more once I got to college. I'm currently a sophomore studying at the University of Missouri, Columbia and I'm loving the variety of topics that I'm learning about. I'll be spending the summer working on computer science related research and I am beyond excited to get started! If you wanna learn more about me feel free to explore my website and learn about my projects, skills, and what I do when I'm not programming!</p>
+        </div>
+        <div class="right" id="picOfMe" onclick="changePicture()"><img src={{url_for('static', filename='me.png')}} alt='me' id='me'/></div>
+
+        <div class="center">
+            <div id="popup">
+<!--
+                <div id="loginContainer">
+                    <h1>Login</h1>
+                    <form action="login.php" method="POST">
+
+                        <input type="hidden" name="action" value="do_login">
+
+                        <div class="stack">
+                            <label for="username">User name:</label>
+                            <input type="text" id="username" name="username" class="ui-widget-content ui-corner-all" autofocus value="<?php print $username; ?>">
+                        </div>
+
+                        <div class="stack">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" class="ui-widget-content ui-corner-all">
+                        </div>
+
+                        <div class="stack">
+                            <input type="submit" value="Submit" id="submitButton">
+                        </div>
+                        <br>
+                    </form>
+                </div>
+-->
+            </div>
+        </div>
+    </body>
+</html>

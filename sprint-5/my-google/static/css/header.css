@@ -1,0 +1,194 @@
+ul{
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+
+}
+
+li {
+    display: inline-block;
+/*                float: left;*/
+}
+
+.nav {
+    display: block;
+    color: lightgray;
+    text-align: center;
+    padding: 14px 50px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: gray;
+    border-bottom: 1px solid gray;
+}
+
+.active {
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+body{
+    padding-top: 0px;
+    background-color: white;
+}
+
+h1 {
+    font-family: sans-serif;
+}
+
+#logo {
+    height: 200px;
+    font-size: 0;
+}
+
+
+.center {
+    text-align: center;
+    width: 100%;
+}
+
+hr {
+    width: 90%;
+    color: lightgray;
+}
+
+.left {
+    width: 50%;
+    float: left;
+    margin-right: 1%;
+}
+
+.right {
+    float: right;
+    width: 45%;
+    margin: 2%;
+}
+
+#me {
+    width: 100%;
+    cursor: pointer;
+}
+
+.halfPic{
+    width: 100%;
+}
+
+.link{
+    text-align: center;
+    display: contents;
+    color: blue;
+    border-bottom: 1px solid blue;
+}
+
+#login, #logout{
+    display: inline-block;
+    color: black;
+    cursor: pointer;
+}
+
+#login{
+    border-bottom: 1px solid black;
+}
+
+.loginDiv{
+    text-align: right;
+}
+
+#loginContainer{
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 60%;
+    text-align: center;
+    display: inline-block;
+    background-color: white;
+}
+
+#popup{
+    display: none;
+    top: 200px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+}
+
+#popupNotHidden{
+    top: 200px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+
+}
+
+#username{
+    margin: 10px;
+    outline: none;
+    border: 1px solid gray;
+}
+#password{
+    margin-bottom: 10px;
+    outline: none;
+    border: 1px solid gray;
+}
+
+#loginWidget{
+    width: 60%;
+    text-align: center;
+    display: inline-block;
+}
+
+#contactHeader{
+    margin-bottom: 0px;
+}
+
+.stack{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+#contactForm{
+    background-color: lightgray;
+    margin-top: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#email{
+    width: 280px;
+}
+
+#emailLabel{
+    margin-left: 25px;
+}
+
+#backToHome{
+    color: black;
+    text-decoration: none;
+    cursor: default;
+}
+
+.enrichmentButton{
+    margin: 20px;
+}
+
+#leftText {
+    width: 50%;
+    float: left;
+    margin-right: 1%;
+}
+
+#rightPic {
+    float: right;
+    width: 45%;
+    margin: 2%;
+}
+
+#desc{
+    width: 75%;
+    margin: auto;
+}
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+<html>
+<head>
+	<title>Login</title>
+	<link href="header.css" rel="stylesheet" type="text/css">
+    <link href="jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <script src="jquery-ui-1.12.1custom/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script>
+        $(function(){
+            $("input[type=submit]").button();
+        }); 
+    </script>
+</head>
+<body>
+    <div class="center"><img src="images/logo.png" alt="logo" id="logo"></div>
+        
+        <br><br><br><br>
+        
+        <br>
+        <hr>
+    
+    <div id="popupNotHidden">
+            <div id="loginContainer">
+                <h1>Login</h1>
+                <p>Many aspects of this site require being logged in to view. Log in really quick and then get back to browsing!</p>
+<!--
+                <?php
+                    if ($error) {
+                        print "<div class=\"ui-state-error\">$error</div>\n";
+                    }
+                ?>
+-->
+                <form action="login.php" method="POST">
+
+                    <input type="hidden" name="action" value="do_login">
+                    
+                    <div class="stack">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" class="ui-widget-content ui-corner-all" autofocus value="<?php print $username; ?>">
+                    </div>
+
+                    <div class="stack">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" class="ui-widget-content ui-corner-all">
+                    </div>
+                    
+                    <div class="stack">
+                        <input type="submit" value="Log in" id="submitButton">
+                        <button><a id="backToHome" href="index.php">Back to Home</a></button>
+                    </div>
+                    <br>
+                </form>
+            </div>
+        </div>
+</body>
+</html>

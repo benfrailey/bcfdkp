@@ -1,0 +1,76 @@
+<!--
+name: Ben Frailey
+pawprint: bcfdkp
+date: January 30, 2019
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Enrichment</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <link href="{{ url_for('static', filename='jquery-ui-1.12.1.custom/jquery-ui.min.css')}}" rel="stylesheet" type="text/css">
+    <script src="{{ url_for('static', filename='jquery-ui-1.12.1.custom/external/jquery/jquery.js')}}"></script>
+    <script src="{{ url_for('static', filename='jquery-ui-1.12.1.custom/jquery-ui.min.js')}}"></script>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+
+        <div class="center">
+          <img src="{{ url_for('static', filename='logo.png')}}" alt="logo" id="logo">
+        </div>
+      <script language="javascript" type="text/javascript"
+  src={{ url_for('static', filename='header.txt')}}></script>
+
+        <script>
+            $(function(){
+                $("input[type=submit]").button();
+            });
+
+            $(document).ready(function(){
+                $("#login").click(function(){
+                    $("#popup").css("display", "block");
+                    $('body').css("background", "grey");
+                    $("#me").css("filter", "brightness(50%)");
+                    $("#logo").css("filter", "brightness(50%)");
+                });
+            });
+
+        </script>
+
+    </head>
+    <body>
+<!--
+        <?php
+            $page = "enrichment";
+            include 'header.php';
+        ?>
+-->
+
+        <div class="center">
+            <p id="desc">Although coding is important to me, I also like to get involved in various organizations around Mizzou. The three that are the most important to me are Upsilon Pi Epsilon, Phi Delta Theta, and Camp Kesem. Click the Buttons below to learn about each of these organizations!</p>
+
+            <div id="ajaxContainer">
+              <div>
+              <div id="leftText"><h1>Upsilon Pi Epsilon</h1><p>Upsilon Pi Epsilon is a National Computer Science Honors Society. Mizzou is home to the Gamma chapter of Misouri. I joined the organization in the Fall of 2018, and have since become the president. We do a variety of service related projects including hosting Girls Who Code at Rockbridge High School and offering tutoring for CS1050. We also help our members with professional development by hosting company tours and having professors come in to discuss their research.</p></div><div id="rightPic"><img src="{{ url_for('static', filename='upe.png')}}" alt="upe" class="halfPic"></div>
+              </div>
+              <br>
+              <br>
+              <hr>
+              <br>
+              <div>
+              <div id="leftText"><h1>Phi Delta Theta</h1><p>Phi Delta Theta is a social fraternity that I joined during the fall semester of my freshman year. I have held a variety of positions since I have joined. As a pledge, I was our pledge class scholarship chair. After initiation, I became the brotherhood chair and I was voted onto the pledge education committee. I had a lot of fun with brotherhood chair, as I was essentially in charge of any brotherhood bonding I could think of, whether it be hosting impromptu Winter Olympic games in the snow and ice, or planning a float trip for the entire chapter. I had a lot of fun with this position while I was in it. Pledge education was also very rewarding because I was able to give feedback on what I had liked or disliked during my own pledgeship and modify the education process so that it can be focused on building men into the best versions of themselves. It was amazing to have such a close relationship with all of the new members as I walked them through the process of becoming men I would be proud to call my brothers. Although I currently have no leadership positions in Phi Delta Theta, I have remained as active as I can. I live in the house right now so it\'s a dream come true to live with 60 of my best friends.</p></div><div id="rightPic"><img src="{{ url_for('static', filename='pdt.png')}}" alt="icook" class="halfPic"></div>
+              </div>
+              <br>
+              <br>
+              <hr>
+              <br>
+              <div>
+              <div id="leftText"><h1>Camp Kesem</h1><p>It was right around Thanksgiving when I was finishing up my Concert Tracker application. I was with my extended family for Thanksgiving, and an uncle of mine who loves cooking asked me if it would be possible to make an application that would accept recipes, parse it to find the time it takes for each instruction, and then tell you what time each instruction needs to happen in order to have the meal prepared in time. I thought it was a really good idea, and so I began working on my new application, iCook (I always planned on coming up with a better name but never got around to it). I decided to make iCook as a Christmas present for my aunt and uncle. I finished the app just in time for my family's Christmas celebrations (The timeline was so close that I was working on it up until an hour before my extended family arrived). This was the first application I designed for someone else and I had a ton of fun making it!</p></div><div id="rightPic"><iframe width="400" height="250" src="https://www.youtube.com/embed/zCElOP-D4n4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+              </div>
+            </div>
+        </div>
+    </body>
+</html>

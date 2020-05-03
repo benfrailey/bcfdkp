@@ -4,7 +4,7 @@ import os
 import sqlite3
 
 # Third party libraries
-from flask import Flask, redirect, request, url_for
+from flask import Flask, redirect, request, url_for, render_template
 from flask_login import (
     LoginManager,
     current_user,
@@ -20,8 +20,8 @@ from db import init_db_command
 from user import User
 
 # Configuration
-GOOGLE_CLIENT_ID = os.environ.get("GOOGLE_CLIENT_ID", None)
-GOOGLE_CLIENT_SECRET = os.environ.get("GOOGLE_CLIENT_SECRET", None)
+GOOGLE_CLIENT_ID = "709593634312-1uequ0b1jpml4id29p49i2o0stqmsr71.apps.googleusercontent.com"
+GOOGLE_CLIENT_SECRET = "9tHpckqPFhocN8vWtwDjDL81"
 GOOGLE_DISCOVERY_URL = (
     "https://accounts.google.com/.well-known/openid-configuration"
 )
@@ -30,6 +30,42 @@ GOOGLE_DISCOVERY_URL = (
 app = Flask(__name__)
 app.secret_key = os.environ.get("SECRET_KEY") or os.urandom(24)
 
+# @app.route('/')
+# @app.route('/home')
+# def home():
+#     return render_template('index.html')
+
+@app.route('/projects')
+def projects():
+    if current_user.is_authenticated:
+        return (
+            "<p>Hello, {}! You're logged in! Email: {}</p>"
+            "<div><p>Google Profile Picture:</p>"
+            '<img src="{}" alt="Google profile pic" height=50 width=50></img></div>'
+            '<a class="button" href="/logout">Logout</a>'.format(
+                current_user.name, current_user.email, current_user.profile_pic
+            )
+             + render_template('projects.html')
+        )
+    else:
+        return ('<a class="button" href="/login">Google Login</a>'
+                + render_template('projects.html'))
+
+@app.route('/enrichment')
+def enrichment():
+    if current_user.is_authenticated:
+        return (
+            "<p>Hello, {}! You're logged in! Email: {}</p>"
+            "<div><p>Google Profile Picture:</p>"
+            '<img src="{}" alt="Google profile pic" height=50 width=50></img></div>'
+            '<a class="button" href="/logout">Logout</a>'.format(
+                current_user.name, current_user.email, current_user.profile_pic
+            )
+             + render_template('enrichment.html')
+        )
+    else:
+        return ('<a class="button" href="/login">Google Login</a>'
+                + render_template('enrichment.html'))
 # User session management setup
 # https://flask-login.readthedocs.io/en/latest
 login_manager = LoginManager()
@@ -58,18 +94,22 @@ def load_user(user_id):
 
 
 @app.route("/")
+@app.route("/home")
 def index():
     if current_user.is_authenticated:
         return (
             "<p>Hello, {}! You're logged in! Email: {}</p>"
             "<div><p>Google Profile Picture:</p>"
-            '<img src="{}" alt="Google profile pic"></img></div>'
+            '<img src="{}" alt="Google profile pic" height=50 width=50></img></div>'
             '<a class="button" href="/logout">Logout</a>'.format(
                 current_user.name, current_user.email, current_user.profile_pic
             )
+             + render_template('index.html')
         )
     else:
-        return '<a class="button" href="/login">Google Login</a>'
+        return ('<a class="button" href="/login">Google Login</a>'
+                + render_template('index.html')
+                )
 
 
 @app.route("/login")

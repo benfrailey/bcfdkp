@@ -1,0 +1,64 @@
+<!--
+name: Ben Frailey
+pawprint: bcfdkp
+date: January 30, 2019
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Projects</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+
+        <div class="center">
+          <img src="{{ url_for('static', filename='logo.png')}}" alt="logo" id="logo">
+        </div>
+      <script language="javascript" type="text/javascript"
+  src={{ url_for('static', filename='header.txt')}}></script>
+
+        <script>
+            $(document).ready(function(){
+                $("#login").click(function(){
+                    $("#popup").css("display", "block");
+                    $('body').css("background", "grey");
+                    $("#me").css("filter", "brightness(50%)");
+                    $("#logo").css("filter", "brightness(50%)");
+                });
+            });
+        </script>
+
+    </head>
+    <body>
+
+        <?php
+            $page = "projects";
+            include 'header.php';
+        ?>
+
+        <div>
+            <div class="left">
+                <h1>Concert Tracker</h1>
+                <a class="link" href="https://github.com/benfrailey/Concert-Tracker">Concert Tracker On Github</a>
+                <p>My first big project that I completed was a concert tracker application. I love music, and so one of my first programming ideas was an application that can track all of the concerts that I've been to and let me save pictures and memories from each of the concerts. At the time, I had no idea how to actually make the application a reality, but once I took a class in Java at Mizzou, I learned everything that I needed to know to make this application a reality.</p>
+            </div>
+            <div class="right"><img src="{{ url_for('static', filename='concert.png') }}" alt="concert" class="halfPic"></div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <div>
+            <div class="left"><img src="{{ url_for('static', filename='icook.png') }}" alt="icook" class="halfPic"></div>
+            <div class="right">
+                <h1>iCook</h1>
+                <a class="link" href="https://github.com/benfrailey/iCook">iCook On Github</a>
+                <p>It was right around Thanksgiving when I was finishing up my Concert Tracker application. I was with my extended family for Thanksgiving, and an uncle of mine who loves cooking asked me if it would be possible to make an application that would accept recipes, parse it to find the time it takes for each instruction, and then tell you what time each instruction needs to happen in order to have the meal prepared in time. I thought it was a really good idea, and so I began working on my new application, iCook (I always planned on coming up with a better name but never got around to it). I decided to make iCook as a Christmas present for my aunt and uncle. I finished the app just in time for my family's Christmas celebrations (The timeline was so close that I was working on it up until an hour before my extended family arrived). This was the first application I designed for someone else and I had a ton of fun making it!</p>
+            </div>
+        </div>
+    </body>
+</html>
