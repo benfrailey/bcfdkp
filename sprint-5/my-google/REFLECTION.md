@@ -1,0 +1,1 @@
+By following the instructions I was able to get the app working without much difficulty. By the end of the semester I hope to hook it up to a personal website that visualizes my resume and allows users to reach out to me for inquiries.
