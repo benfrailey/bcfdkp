@@ -45,10 +45,11 @@ def projects():
             '<a class="button" href="/logout">Logout</a>'.format(
                 current_user.name, current_user.email, current_user.profile_pic
             )
-             + render_template('projects.html')
-        )
+            + render_template('header.html')
+            + render_template('projects.html'))
     else:
         return ('<a class="button" href="/login">Google Login</a>'
+                + render_template('headerSignout.html')
                 + render_template('projects.html'))
 
 @app.route('/enrichment')
@@ -61,11 +62,31 @@ def enrichment():
             '<a class="button" href="/logout">Logout</a>'.format(
                 current_user.name, current_user.email, current_user.profile_pic
             )
+            + render_template('header.html')
              + render_template('enrichment.html')
         )
     else:
         return ('<a class="button" href="/login">Google Login</a>'
+                + render_template('headerSignout.html')
                 + render_template('enrichment.html'))
+
+@app.route('/contact')
+def contact():
+    if current_user.is_authenticated:
+        return (
+            "<p>Hello, {}! You're logged in! Email: {}</p>"
+            "<div><p>Google Profile Picture:</p>"
+            '<img src="{}" alt="Google profile pic" height=50 width=50></img></div>'
+            '<a class="button" href="/logout">Logout</a>'.format(
+                current_user.name, current_user.email, current_user.profile_pic
+            )
+            + render_template('header.html')
+             + render_template('contact.html')
+        )
+    else:
+        return ('<a class="button" href="/login">Google Login</a>'
+                + render_template('headerSignout.html')
+                + render_template('contact.html'))
 # User session management setup
 # https://flask-login.readthedocs.io/en/latest
 login_manager = LoginManager()
@@ -104,10 +125,12 @@ def index():
             '<a class="button" href="/logout">Logout</a>'.format(
                 current_user.name, current_user.email, current_user.profile_pic
             )
+            + render_template('header.html')
              + render_template('index.html')
         )
     else:
         return ('<a class="button" href="/login">Google Login</a>'
+        + render_template('headerSignout.html')
                 + render_template('index.html')
                 )
 

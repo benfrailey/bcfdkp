@@ -1,1 +1,18 @@
-document.write('<div class="center"></div><ul><li><a href="home" class="nav">Home</a></li><li><a href="projects"  class="nav">Projects</a></li><li><a href="enrichment" class="nav">Enrichment</a></li><li><a href="contact" class="nav">Contact Me</a></li></ul><br><hr>')
+document.write('
+<div class="center"></div>
+<ul>
+<li>
+	<a href="home" class="nav">Home</a>
+</li>
+<li>
+	<a href="projects"  class="nav">Projects</a>
+</li>
+<li>
+	<a href="enrichment" class="nav">Enrichment</a>
+</li>
+<li>
+	<a href="contact" class="nav">Contact Me</a>
+</li>
+</ul>
+<br>
+<hr>')

@@ -4,19 +4,7 @@ pawprint: bcfdkp
 date: January 30, 2019
 -->
 <!--
-<?php
-    if(!session_start()){
-        header("Location: error.php");
-        exit;
-    }
 
-    $username = empty($_SESSION['username']) ? '' : $_SESSION['username'];
-    
-    if(!$username){
-        header("Location: login.php");
-        exit;
-    }
-?>
 -->
 
 <!DOCTYPE html>
@@ -24,23 +12,25 @@ date: January 30, 2019
     <head>
         <meta charset="utf-8">
         <title>Contact Me</title>
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <link href="jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
-    <script src="jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
-    <script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 
-        <link rel="stylesheet" type="text/css" href="header.css">
-        
-        <script language="javascript" type="text/javascript" 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <link href="{{ url_for('static', filename='jquery-ui-1.12.1.custom/jquery-ui.min.css')}}" rel="stylesheet" type="text/css">
+    <script src="{{ url_for('static', filename='jquery-ui-1.12.1.custom/external/jquery/jquery.js')}}"></script>
+    <script src="{{ url_for('static', filename='jquery-ui-1.12.1.custom/jquery-ui.min.js')}}"></script>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+
+
+
+        <script language="javascript" type="text/javascript"
   src="header.txt"></script>
         <script>
 
             $(function(){
                 $("input[type=submit]").button();
             });
-            
-            
+
+
             $(document).ready(function(){
                 $("#login").click(function(){
                     $("#popup").css("display", "block");
@@ -49,25 +39,18 @@ date: January 30, 2019
                     $("#logo").css("filter", "brightness(50%)");
                 });
             });
-            
-            
+
+
         </script>
-        
+
     </head>
     <body>
 
-<!--
-        <?php 
-            $page = "contact";
-            include 'header.php';
-        ?>
--->
-        
         <div class="center">
             <div id="loginWidget" class="ui-widget">
                 <h1 class="ui-widget-header" id="contactHeader">Contact Me</h1>
 
-                
+
             </div>
         </div>
     </body>
