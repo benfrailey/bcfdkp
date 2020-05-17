@@ -20,10 +20,6 @@ date: January 30, 2019
 
         <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
 
-
-
-        <script language="javascript" type="text/javascript"
-  src="header.txt"></script>
         <script>
 
             $(function(){
@@ -52,6 +48,17 @@ date: January 30, 2019
 
 
             </div>
+            <form action="/contactSuccess" method="POST">
+
+            <div class="form-group">
+              <label>Message</label>
+              <input type="text" class="form-control" id="message" name="message" height="300" placeholder="Leave me a message!">
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">Send</button>
+
+          </form>
         </div>
     </body>
 </html>

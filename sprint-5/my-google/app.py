@@ -35,6 +35,38 @@ app.secret_key = os.environ.get("SECRET_KEY") or os.urandom(24)
 # def home():
 #     return render_template('index.html')
 
+
+@app.route("/contactSuccess", methods=["GET", "POST"])
+def contactSuccess():
+    if current_user.is_authenticated:
+        if request.method == "POST":
+
+            user = current_user.name
+            email = current_user.email
+            message = request.form.get("message")
+
+            messageString = "\nUsername: " + user + "\nEmail: " + email + "\nMessage: " + message + "\n"
+
+            responses = open("responses.txt","a")
+            responses.write(messageString)
+
+            return redirect(request.url)
+
+        return (
+        "<p>Hello, {}! You're logged in! Email: {}</p>"
+        "<div><p>Google Profile Picture:</p>"
+        '<img src="{}" alt="Google profile pic" height=50 width=50></img></div>'
+        '<a class="button" href="/logout">Logout</a>'.format(current_user.name, current_user.email, current_user.profile_pic) + 
+
+        render_template("header.html") +
+        render_template("contactSuccess.html"))
+
+    else:
+        return ('<a class="button" href="/login">Google Login</a>'
+        + render_template('headerSignout.html')
+                + render_template('index.html'))
+
+
 @app.route('/projects')
 def projects():
     if current_user.is_authenticated:
